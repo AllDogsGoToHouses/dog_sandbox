@@ -19,12 +19,10 @@
     <nav>
         <div class="nav-wrapper navbar-fixed">
             <a href="#!" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
-            <ul class="right hide-on-med-and-down">
-                    <li><a class="waves-effect waves-light btn"><i class="material-icons center">home</i></a></li>
-                  </ul>
+            <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></as>
         </div>
     </nav>
-    
+
     <div class="container">
         <div>
         <h1 class="center">All Dogs Go to Houses</h1>
@@ -71,9 +69,25 @@
 
     </div> 
     </div>
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../public/assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
+
+        
+<!-- Navbar -->
+<ul id="slide-out" class="sidenav">
+    
+        <li><div class="user-view">
+            <div class="background">
+            <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+            </div>
+        </div></li>
+        <div id="side-menu">
+        <li><a href="shelter.html">Shelter</a></li>
+        <li><a href="adopter.html">Adopt</a></li>
+        <li><a href="faves.html">Favorites</a></li>   
+    </div>
+        
+        
