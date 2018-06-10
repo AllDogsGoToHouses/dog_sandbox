@@ -16,7 +16,18 @@
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+
 </head>
+
+<script>
+        document.ready(function(){
+            $('select').formSelect();
+    
+        })
+        
+    </script>
+
 <body>
     <nav>
         <div class="nav-wrapper navbar-fixed">
@@ -28,10 +39,50 @@
     </nav>
     
     <div class="container">
+        <div>
         <h1 class="center">All Dogs Go to Houses</h1>
-        <h5>Every dog deserves a home <br>and every adopter a great match. </h5>
-        <h6>Find your ideal pet match</h6>
+        <h4>Every dog deserves a home <br>and every adopter a great match </h4>
+        <h5>Find your ideal pet match</h5>
+        </div>
 
+         <div id="search-form">        
+        <h6>Preferences</h6>
+        <select class="browser-default">
+            <option value="" disabled selected>Size</option>
+            <option value="0">No Preference</option>
+            <option value="1">Small</option>
+            <option value="2">Medium</option>
+            <option value="3">Large</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>Gender</option>
+            <option value="0">No Preference</option>
+            <option value="1">Female</option>
+            <option value="2">Male</option>
+            <option value="3">Female (Spayed)</option>
+            <option value="3">Male (Spayed)</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>Age</option>
+            <option value="0">No Preference</option>
+            <option value="1">Under 1 Year</option>
+            <option value="2">Over 1 Year</option>
+        </select>
+        <select class="browser-default">
+            <option value="" disabled selected>Activity</option>
+            <option value="0">No Preference</option>
+            <option value="1">Let's Go Running</option>
+            <option value="2">Playful</option>
+            <option value="3">Couch Potato</option>
+        </select>
+
+        <div id="adopter-info">
+        <h6>Adopter Info</h6>
+        <button id="google-signup" class="btn"><i class="fab fa-facebook-f"></i> Sign Up with Google</button> <br>
+        <button id="facebook-signup" class="btn"><i class="fab fa-google-plus-g"></i> Sign Up with Facebook</button> 
+        </div>
+
+    </div> 
     </div>
 
     <!-- Compiled and minified JavaScript -->
@@ -40,29 +91,50 @@
 </body>
 </html>
 
-<script>
-    document.ready(function(){
-        $(".dropdown-trigger").dropdown();
-
-    })
-    
-</script>
 
 
 
-<style> body{font-family: 'Viga', sans-serif; }
-        body {
-        background-image: url("../public/imgs/01.jpg");
-        background-size: cover;
+
+<style> body {
+            font-family: 'Viga', sans-serif; 
+            color: #2b1b0e;
         }
-        #logo{
+        body {
+            background-image: url("../public/imgs/01.jpg");
+            background-size: cover;
+        }
+        #logo {
             height: 80px;
         }
-        .nav-wrapper{
+        .nav-wrapper {
             background-color: orange;
         }
-        .btn{background-color: white; color: orange;}
-        .btn:hover {background-color: yellow;
-}
-        
+        .btn{
+            background-color: white; color: orange;
+            }
+        .btn:hover {
+            background-color: 	#FFDF00	;
+        }
+        select {
+            width: 30%;
+        }
+        #search-form, #adopter-info {
+            margin-top: 5%;
+        }
+        #signup{
+            margin-top: 1%;
+        }
+        select{
+            margin-bottom: 1%;
+        }
+        #facebook-signup, #google-signup{
+            margin-top: 1%;
+            color: darkorange;
+        }
+        .input-field{
+            background-color: none;
+            width: 30%;
+        }
+    
+ 
 </style>
