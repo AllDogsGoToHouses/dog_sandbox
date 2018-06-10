@@ -1,0 +1,22 @@
+body {
+    background-image: url("../imgs/01.jpg");
+    background-size: cover;
+}
+
+select {
+    width: 30%;
+}
+#search-form, #adopter-info {
+    margin-top: 5%;
+}
+#signup{
+    margin-top: 1%;
+}
+select{
+    margin-bottom: 1%;
+}
+#facebook-signup, #google-signup{
+    margin-top: 1%;
+    color: darkorange;
+}
+
