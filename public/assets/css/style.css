@@ -1,0 +1,40 @@
+body {
+    font-family: 'Viga', sans-serif; 
+    color: #2b1b0e;
+}
+body {
+    background-image: url("../imgs/01.jpg");
+    background-size: cover;
+}
+#logo {
+    height: 80px;
+}
+.nav-wrapper {
+    background-color: orange;
+}
+.btn{
+    background-color: white; color: orange;
+    }
+.btn:hover {
+    background-color: 	#FFDF00	;
+}
+select {
+    width: 30%;
+}
+#search-form, #adopter-info {
+    margin-top: 5%;
+}
+#signup{
+    margin-top: 1%;
+}
+select{
+    margin-bottom: 1%;
+}
+#facebook-signup, #google-signup{
+    margin-top: 1%;
+    color: darkorange;
+}
+.input-field{
+    background-color: none;
+    width: 30%;
+}
