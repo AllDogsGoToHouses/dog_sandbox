@@ -17,3 +17,10 @@ body {
     width: 400px;
     background-color: whitesmoke;
 }
+
+#shelter-form, #dog-form {
+    margin-top: 5%
+}
+.mod-subtitle{
+    margin-top: 15%;
+}

@@ -18,18 +18,20 @@
 <body>
     <nav>
         <div class="nav-wrapper navbar-fixed">
-            <a href="#!" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+            <a href="adopter.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
             <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></as>
         </div>
+        <ul>
+        </ul>
     </nav>
 
-
     <div class="container">
-        <h1 class="center">Favorites</h1>
-
-
+        <div class="row valign">
+                <div id="faves-holder"></div>
+            </div>
         </div>
-        
+    </div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -38,12 +40,6 @@
 
 </body>
 </html>
-
-<script>
-  
-</script>
-
-
 
 <!-- Navbar -->
 <ul id="slide-out" class="sidenav">
@@ -61,3 +57,23 @@
     
     
 </ul>
+
+<script>
+
+    $("#add-fave").on("click", function(){
+        addFave()
+    })
+        function addFave(){
+            $("#faves-holder").append(`<div class="col s3 m5">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="https://placeimg.com/640/480/animals">
+                        </div>
+                    <div class="card-action">
+                        <p> Favorite's Name</p>
+                    </div>
+                `
+        )
+    } 
+
+</script>
