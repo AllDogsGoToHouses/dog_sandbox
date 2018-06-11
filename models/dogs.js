@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
     var Dog = sequelize.define("Dog", {
-        dog_name: {
+ dog_name: {
     type: DataTypes.STRING
   },
   dog_image: {
