@@ -1,3 +1,7 @@
+#index-menu{
+    width: 1%;
+}
+
 body {
     font-family: 'Viga', sans-serif; 
     color: #2b1b0e;
@@ -10,10 +14,12 @@ body {
     background-color: orange;
 }
 .btn{
-    background-color: white; color: orange;
+    background-color: white; 
+    color: orange;
     }
 .btn:hover {
-    background-color: 	#FFDF00	;
+    background-color: 	#ff9f00	;
+    color: white;
 }
  #menu-1{
      background-image: url("../imgs/goldBG.jpg");
@@ -31,3 +37,7 @@ body {
  #side-menu{
      margin-top: 35%;
  }
+
+.test-btn{
+    text-align: center;
+}
