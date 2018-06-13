@@ -4,22 +4,22 @@
 
 USE dogs_db;
 
--- CREATE TABLE dogs (
---   dog_id INT NOT NULL AUTO_INCREMENT,
---   dog_name VARCHAR(100) NOT NULL,
---   dog_image_url VARCHAR(200) NOT NULL,
---   size VARCHAR(10) NOT NULL,
---   age INT NOT NULL,
---   activity_level VARCHAR(20) NOT NULL,
---   gender VARCHAR(100),
---   breed VARCHAR(100),
---   likes VARCHAR(200),
---   dislikes VARCHAR(200),
---   shelter_id INT,
---   PRIMARY KEY (dog_id)
--- );
+CREATE TABLE dogs (
+  dog_id INT NOT NULL AUTO_INCREMENT,
+  dog_name VARCHAR(100) NOT NULL,
+  dog_image_url VARCHAR(200) NOT NULL,
+  dog_size VARCHAR(10) NOT NULL,
+  age INT NOT NULL,
+  activity_level VARCHAR(20) NOT NULL,
+  gender VARCHAR(100),
+  breed VARCHAR(100),
+  likes VARCHAR(200),
+  dislikes VARCHAR(200),
+  shelter_id INT,
+  PRIMARY KEY (dog_id)
+);
 
-INSERT INTO dogs (dog_name, dog_image_url, size, age, activity_level, gender, breed, likes, dislikes, shelter_id)
+INSERT INTO dogs (dog_name, dog_image_url, dog_size, age, activity_level, gender, breed, likes, dislikes, shelter_id)
 VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Male/Neutered", "Pitbull" "Weed, Chillin, Small Birds", "Loud Noises, Cops", 1), 
 
 ("Google", "https://i.imgflip.com/1f0068.jpg", "Small", 13, "Playful", "Male", "Chihuahua", "Kids, Big Dogs", "Small Dogs, bugs, bug eyed things", 2),
