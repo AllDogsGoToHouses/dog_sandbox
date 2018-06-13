@@ -15,28 +15,44 @@
         <link rel="stylesheet" href="../public/assets/css/style.css">
         <link rel="stylesheet" href="../public/assets/css/body.css">
     </head>
-
+<main>
     <body id="shelter-page">
         <nav>
             <div class="nav-wrapper navbar-fixed">
-                <a href="adopter.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+                <a href="index.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
                 <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
+                <button class="right btn sign-up-btn">Sign Up</button>
             </div>
         </nav>
         
         <div class="container">
             <h1 class="center">All Dogs Go to Houses</h1>
             <div class="row">
-                <div class="col center offset-s6">
+                <div class="col center offset-s6 mobile-hide">
                     <div id="shelter-actions">
                         <h4> Every dog deserves a home <br>and every adopter a great match </h4>
                         <a class="waves-effect waves-light btn modal-trigger " href="#add-shelter" class="add">Add Shelter</a> <br>
                         <a class="waves-effect waves-light btn modal-trigger " href="#add-dog" class="add">Add Dog</a>
                     </div>
-                </div>   
+                </div>
+                <div class="container">
+                <div class="col center">
+                    <span id="shelter-actions" class="mobile-show">
+                        <h4> Every dog deserves a home <br>and every adopter a great match </h4>
+                        <a class="waves-effect waves-light btn modal-trigger add " href="#add-shelter">Add Shelter</a> <br>
+                        <a class="waves-effect waves-light btn modal-trigger add" href="#add-dog">Add Dog</a>
+                    </span>
+                </div> 
             </div>
         </div>
-
+</main>
+<footer>
+    <div class="footer-copyright center footer-fixed">
+        <div class="container align-right">
+            © 2018 ADGTH
+        </div>
+    </div>
+</footer>
 
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -122,7 +138,7 @@
                 <div class="row">
                    <div id="dog-select-size" class="col s3">
                         <select class="browser-default">
-                            <option value="" disabled selected>Select size</option>
+                            <option value="" disabled selected>Size</option>
                             <option value="1">Small</option>
                             <option value="2">Medium</option>
                             <option value="3">Large</option>
@@ -130,7 +146,7 @@
                     </div> 
                     <div id="dog-select-gender" class="col s3">
                         <select class="browser-default">
-                            <option value="" disabled selected>Select gender</option>
+                            <option value="" disabled selected>Gender</option>
                             <option value="1">Male</option>
                             <option value="2">Male (Neutered)</option>
                             <option value="3">Female</option>
@@ -139,14 +155,14 @@
                     </div>                                               
                     <div id="dog-select-age" class="col s3">
                         <select class="browser-default">
-                            <option value="" disabled selected>Select age</option>
+                            <option value="" disabled selected>Age</option>
                             <option value="1">Under 1 Year</option>
                             <option value="2">Over 1 Year</option>
                         </select>
                     </div> 
                     <div id="dog-select-activity" class="col s3">
                         <select class="browser-default">
-                            <option value="" disabled selected>Activity Level</option>
+                            <option value="" disabled selected>Activity </option>
                             <option value="1">Let's Go Running</option>
                             <option value="2">Playful</option>
                             <option value="3">Couch Potato</option>
@@ -191,22 +207,36 @@
 </div>
 
 
-        
 <!-- Side Nav -->
 <ul id="slide-out" class="sidenav">
-    <li>
-        <div class="user-view">
-            <div class="background">
-                <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
-            </div>
-        </div>
-    </li>
-    <div id="side-menu">
-        <li><a href="shelter.html">Shelter</a></li>
-        <li><a href="adopter.html">Adopt</a></li>
-        <li><a href="faves.html">Favorites</a></li>
+        <span id="side-nav-body">
+            <span id="side-nav-article">
+                <span id="side-nav-header">                
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+                            </div>
+                        </div>
+                    </li>
+                </span>
+                <span id="side-nav-main">
+                    <div id="side-menu">
+                            <li><a href="shelter.html">Shelter</a></li>
+                            <li><a href="adopter.html">Adopt</a></li>
+                            <li><a href="faves.html">Favorites</a></li>
 
-        <!-- Remove this -->
-        <li><a href="results.html">Results</a></li>    
-    </div> 
-</ul>
+                            <!-- Remove this -->
+                            <li><a href="results.html">Results</a></li>
+                </span>    
+                        <footer id="side-nav-footer">
+                            <div id="login" class="row">
+                                <p class="sign-in">Sign in </p>
+                                <li><button class="btn col s5"><i class="fab fa-facebook-f"> </i></button></li>
+                                <li><button class="btn col s5"><i class="fab fa-google-plus-g"> </i></button></li>
+                            </div>
+                        </footer>
+                    </div>
+            </span>
+        </span>
+    </ul>

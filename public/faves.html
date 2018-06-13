@@ -16,27 +16,34 @@
         <link rel="stylesheet" href="../public/assets/css/body.css">
 
 </head>
+<main>
+    <body id="faves-page">
+        <nav>
+            <div class="nav-wrapper navbar-fixed">
+                <a href="adopter.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+                <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
+            </div>
+        </nav>
 
-<body id="faves-page">
-    <nav>
-        <div class="nav-wrapper navbar-fixed">
-            <a href="adopter.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
-            <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div ="adgth-text">
-            <h1 class="center">Favorite Dogs</h1>
-            <a class="waves-effect waves-light btn test-btn" id="add-fave" >Add Dog to Favorites</a>
-        </div>
-        <div id="results">
-            <div class="row">
-                <div id="faves-holder"></div>
+        <div class="container">
+            <div ="adgth-text" >
+                <h1 class="center">Favorite Dogs</h1>
+                <a class="waves-effect waves-light btn test-btn mobile-hide" id="add-fave" >Add Dog to Favorites</a>
+            </div>
+            <div id="results">
+                <div class="row">
+                    <div id="faves-holder"></div>
+                </div>
             </div>
         </div>
+</main>
+<footer>
+    <div class="footer-copyright center footer-fixed">
+        <div class="container align-right">
+            © 2018 ADGTH
+        </div>
     </div>
-
+</footer>
     
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -45,20 +52,47 @@
     </body>
 </html>
 
-
-        
 <!-- Side Nav -->
+
 <ul id="slide-out" class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background">
-                    <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+        <span id="side-nav-body">
+            <span id="side-nav-article">
+                <span id="side-nav-header">                
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+                            </div>
+                        </div>
+                    </li>
+                </span>
+                <span id="side-nav-main">
+                    <div id="side-menu">
+                            <li><a href="shelter.html">Shelter</a></li>
+                            <li><a href="adopter.html">Adopt</a></li>
+                            <li><a href="faves.html">Favorites</a></li>
+                            <!-- Remove this -->
+                            <li><a href="results.html">Results</a></li>
+                </span>    
+                    <footer id="side-nav-footer">
+                        <div id="login" class="row">
+                            <p class="sign-in">Sign in: </p>
+                            <li><button class="btn col s5"><i class="fab fa-facebook-f"> </i></button></li>
+                            <li><button class="btn col s5"><i class="fab fa-google-plus-g"> </i></button></li>
+                        </div>
+                    </footer>
                 </div>
-            </div>
-        </li>
-        <div id="side-menu">
-            <li><a href="shelter.html">Shelter</a></li>
-            <li><a href="adopter.html">Adopt</a></li>
-            <li><a href="faves.html">Favorites</a></li>  
-        </div> 
+            </span>
+        </span>
     </ul>
+  <!-- Modal Structure -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+          

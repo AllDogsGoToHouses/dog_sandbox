@@ -17,7 +17,9 @@ CREATE TABLE dogs (
 );
 
 INSERT INTO dogs (dog_name, dog_image, size, age, activity_level, likes, dislikes)
-VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Weed, Chillin, Small Birds", "Loud Noises, Cops"), 
+VALUES 
+
+("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Weed, Chillin, Small Birds", "Loud Noises, Cops"), 
 
 ("Google", "https://i.imgflip.com/1f0068.jpg", "Small", 13, "Playful", "Kids, Big Dogs", "Small Dogs, bugs, bug eyed things"),
 
