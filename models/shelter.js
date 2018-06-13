@@ -1,25 +1,17 @@
 module.exports = function(sequelize, DataTypes) {
-    var Shelter = sequelize.define("Shelter", {
-      shelter_name: {
-        type: DataTypes.STRING
-      },
-      shelter_manager: {
-        type: DataTypes.STRING
-      },
-      shelter_number: {
-        type: DataTypes.STRING
-      },
-      shelter_email: {
-        type: DataTypes.STRING
-      },
-      createdAt: false,
-      updatedAt: false,
-      },{
-      classMethods: {
-        associate: function(models) {
-          // associations can be defined here
-        }
+  var Shelter = sequelize.define("Shelter", {
+    shelter_name: DataTypes.STRING,
+    shelter_manager: DataTypes.STRING,
+    shelter_number: DataTypes.STRING,
+    shelter_email: DataTypes.STRING,
+  },{
+    timestamps: false
+  },{
+    classMethods: {
+      associate: function(models) {
+        // associations can be defined here
       }
-    });
-    return Shelter;
-  };
+    }
+  });
+  return Shelter;
+};    
