@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/AllDogsGoToHouses/dog_sandbox#readme",
   "dependencies": {
+    "express": "^4.16.3",
+    "loader": "^2.1.1",
     "mysql2": "^1.5.3",
-    "sequelize": "^4.37.10"
+    "sequelize": "^4.37.10",
+    "sequelize-cli": "^4.0.0"
   }
 }
