@@ -1,7 +1,7 @@
 USE dogs_db;
 
 INSERT INTO dogs (dog_name, dog_image_url, size, age, activity_level, gender, breed, likes, dislikes, shelter_id)
-VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Male/Neutered", "Pitbull", "Weed, Chillin, Small Birds", "Loud Noises, Cops", 1), 
+VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Male/Neutered", "Pitbull" "Weed, Chillin, Small Birds", "Loud Noises, Cops", 1), 
 
 ("Google", "https://i.imgflip.com/1f0068.jpg", "Small", 13, "Playful", "Male", "Chihuahua", "Kids, Big Dogs", "Small Dogs, bugs, bug eyed things", 2),
 
@@ -40,23 +40,8 @@ VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.j
 ("Bond", "https://preview.ibb.co/g3Q18T/17.jpg", "Large", 11, "Playful", "Male", "German Shepard", "Martinis, Bitches", "British Super Villians", 1)
 
 
--- Shelter Info:
--- Dog Name:
--- Image of dog: URL
--- Size: Small, Medium or Large
--- Age:
--- Activity Level: Active, Playful, Couch Potato
--- Likes: Kids, Other Dogs
--- Doesn't Like: Fireworks, Cats
+INSERT INTO adopter (adopter_name, adopter_email, adopter_favorites)
+VALUES ("Jared", "adopter@email.com", "1, 2, 3, 7")
 
-
-
--- http://i.imgur.com/mktp8WL.jpg
--- https://www.telegraph.co.uk/content/dam/video_previews/r/v/rvmjg1nze6z4vd2gj6owhh9jc6xvdmhk-xlarge.jpg
--- https://pbs.twimg.com/profile_images/2677749134/52f49fade80c0f71eab0ee68a905ca9e_400x400.jpeg
--- https://cbsnews1.cbsistatic.com/hub/i/r/2011/09/29/9b4f45e5-a643-11e2-a3f0-029118418759/resize/620x465/3b1eaf34514222b91efa34aaaa9bf64a/1-etsy-youngurbanpuppy.jpg
--- http://2.bp.blogspot.com/-LyVF_sJMJkA/Tzu-8bxH00I/AAAAAAAAH5I/23faMTa8Lu0/s1600/3-headed-dog-costume.jpg
--- http://www.samorzady.org/upload/2018/01/10/dogs-in-costumes-httpwwwnamecombloggeneralfun-funny-costumes-for-dogs-s-2133cab2ebb6f08f.jpg
--- https://timidberemy.files.wordpress.com/2014/10/frog.jpg
--- https://petfriendlysites.com/wp-content/uploads/2018/02/need-more-proof-that-life-with-dogs-is-the-best-watch-this-and-smile.jpg
--- https://i.ytimg.com/vi/HJig6yxU5gY/maxresdefault.jpg
+INSERT INTO shelter (shelter_name, shelter_manager, shelter_phone, shelter_email)
+VALUES ("Cause for SB Paws", "Dr. Manager", "9093513274", "Cause4SBPaws@gmail.com")
