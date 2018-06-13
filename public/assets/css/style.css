@@ -5,6 +5,7 @@
 body {
     font-family: 'Viga', sans-serif; 
     color: #2b1b0e;
+    background-attachment: fixed;
 }
 
 #logo {
@@ -18,6 +19,10 @@ body {
     color: orange;
     }
 .btn:hover {
+    background-color: 	#ff9f00	;
+    color: white;
+}
+.signup:hover{
     background-color: 	#ff9f00	;
     color: white;
 }
@@ -41,3 +46,19 @@ body {
 .test-btn{
     text-align: center;
 }
+
+.footer-copyright{
+    background-color: orange;
+    margin-top: 5%;
+    padding: 1%;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }
+

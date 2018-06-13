@@ -1,10 +1,16 @@
+/* index */
+#main{
+    background-image: url("../imgs/mobile.jpg");
+}
+
+
 /* Adopt */
 #adopt-page {
     background-image: url("../imgs/01.jpg");
     background-size: cover;
 }
 
-select {
+.select-adopt {
     width: 30%;
 }
 #search-form, #adopter-info {
@@ -20,10 +26,6 @@ select{
     margin-top: 1%;
     color: darkorange;
 }
-
-
-
-
 
 /* Shelter */
 #shelter-page {
@@ -56,6 +58,7 @@ select{
 #faves-page {
     background-image: url("../imgs/03.jpg");
     background-size: cover;
+
 }
 
 
@@ -65,3 +68,83 @@ select{
     background-image: url("../imgs/04.jpg");
     background-size: cover;
 }
+#side-menu{
+    margin-top: 40%;      
+}
+#login{
+    margin-top: 120%;
+    margin-left: 10%;
+}
+
+.mobile-show{
+    visibility: hidden;
+}
+
+.wrapper{
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-column-gap: 20px;
+}
+
+.img-link{
+    width: 100%;
+    border: 1px solid white;
+}
+
+.sign-up-btn{
+    width: 100px;
+}
+
+.top-left {
+    
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+/* mobile */
+@media screen and (max-width: 500px) {
+    body, #shelter-page, #results-page, #faves-page {
+      background-image: url("../imgs/mobile.jpg");
+    }
+    .navbar-fixed {
+        padding-bottom:70px;
+    }
+    .mobile-hide{
+       display: none;
+    }
+    .mobile-show{
+        visibility: visible;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h4{
+        font-size: 20px;
+        text-align: center;
+    }
+    h5{
+        font-size: 18px;
+        text-align: center;
+    }
+    #preferences{
+        margin-top: 50px;
+    }
+    #search-form{
+        margin-right: 60px;
+    }
+    .select-adopt, .signup{
+        width: 380px;
+    }
+    #adopter-info{
+        margin-top: 10px;
+    }
+    .signup-nav{
+        width: 280px;
+        text-align: center;
+    }
+    .add{
+        width: 300px;
+    }
+  }
