@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ADGTH | Adopt A Pet</title>
+
+        <!-- Materialize -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
+        <!-- FontAwesome: Google & Facebook Icons -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../public/assets/css/style.css">
+        <link rel="stylesheet" href="../public/assets/css/body.css">
+</head>
+
+<body id="adopt-page">
+    <nav>
+        <div class="nav-wrapper navbar-fixed">
+            <a href="adopter.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+            <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ="adgth-text">
+            <h1 class="center">All Dogs Go to Houses</h1>
+            <h4>Every dog deserves a home <br>and every adopter a great match </h4>
+            <h5>Find your ideal pet match</h5>
+        </div>
+
+         <div id="search-form">        
+            <h6>Preferences</h6>
+            <select class="browser-default">
+                <option value="" disabled selected>Size</option>
+                <option value="0">No Preference</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+            </select>
+            <select class="browser-default">
+                <option value="" disabled selected>Gender</option>
+                <option value="0">No Preference</option>
+                <option value="" disabled selected>Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Male (Neutered)</option>
+                <option value="3">Female</option>
+                <option value="4">Female (Spayed)</option>
+            </select>
+            <select class="browser-default">
+                <option value="" disabled selected>Age</option>
+                <option value="0">No Preference</option>
+                <option value="1">Under 1 Year</option>
+                <option value="2">Over 1 Year</option>
+            </select>
+            <select class="browser-default">
+                <option value="" disabled selected>Activity</option>
+                <option value="0">No Preference</option>
+                <option value="1">Let's Go Running</option>
+                <option value="2">Playful</option>
+                <option value="3">Couch Potato</option>
+            </select>
+
+            <div id="adopter-info">
+                <h6>Adopter Info</h6>
+                    <button id="google-signup" class="btn"><i class="fab fa-facebook-f"></i> Sign Up with Facebook</button> <br>
+                    <button id="facebook-signup" class="btn"><i class="fab fa-google-plus-g"></i> Sign Up with Google</button> 
+            </div>
+        </div> 
+    </div>
+
+    
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="../public/assets/js/app.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    </body>
+</html>
+
+
+        
+<!-- Side Nav -->
+<ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+                </div>
+            </div>
+        </li>
+        <div id="side-menu">
+            <li><a href="shelter.html">Shelter</a></li>
+            <li><a href="adopter.html">Adopt</a></li>
+            <li><a href="faves.html">Favorites</a></li>
+            
+            <!-- Remove this -->
+            <li><a href="results.html">Results</a></li>      
+        </div> 
+    </ul>
