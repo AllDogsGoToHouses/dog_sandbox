@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
   dog_image: {
     type: DataTypes.STRING
   },
-  size: {
+  dog_size: {
     type: DataTypes.STRING
   },
   age: {
