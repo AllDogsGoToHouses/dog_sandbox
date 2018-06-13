@@ -1,7 +1,7 @@
 USE dogs_db;
 
-INSERT INTO dogs (dog_name, dog_image_url, size, age, activity_level, gender, breed, likes, dislikes, shelter_id)
-VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Male/Neutered", "Pitbull" "Weed, Chillin, Small Birds", "Loud Noises, Cops", 1), 
+INSERT INTO dogs (dog_name, dog_image_url, dog_size, age, activity_level, gender, breed, likes, dislikes, shelter_id)
+VALUES ("Marley", "http://www.toptenz.net/wp-content/uploads/2013/10/rasta-dog.jpg", "Small", 15, "Active", "Male/Neutered", "Pitbull", "Weed, Chillin, Small Birds", "Loud Noises, Cops", 1), 
 
 ("Google", "https://i.imgflip.com/1f0068.jpg", "Small", 13, "Playful", "Male", "Chihuahua", "Kids, Big Dogs", "Small Dogs, bugs, bug eyed things", 2),
 
