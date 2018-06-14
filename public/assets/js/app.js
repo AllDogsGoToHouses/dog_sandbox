@@ -6,6 +6,28 @@ $(document).ready(function(){
     $('.carousel.carousel-slider').carousel({fullWidth: true});
   })
 
+  // Sign Up Buttons
+$("#email").on("click", function(){
+    signUpType = "email"
+    signUp(signUpType)
+})
+
+$("#facebook").on("click", function(){
+    signUpType = "facebook"
+    signUp(signUpType)
+})
+
+$("#gmail").on("click", function(){
+    signUpType = "gmail"
+    signUp(signUpType)
+})
+
+$(".back").on("click", function(){
+    location.reload()
+})
+
+
+
 // Add Favorite Cards
 $("#add-fave").on("click", function(){
     addFave(imageURL,name, dogInfo)
@@ -49,12 +71,12 @@ function showResults(imageURL, name, dogInfo){
 
 }
 
-// Delete Favorite Cards
-$(".delete-btn").on("click", function(){
-    console.log("Removed from favorites.")
-})
+function signUp(signUpType){
+    $("#signup-holder").html(signUpType)
 
-// To Do 
-// Disable Right Swipe of Carousel
-// Link Database Values to show on page
-// Format Search Results Card
+    if (signUpType = "email"){
+        console.log("Signing up with email")
+    }
+}
+
+

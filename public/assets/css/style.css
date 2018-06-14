@@ -27,7 +27,7 @@ body {
     color: white;
 }
  #menu-1{
-     background-image: url("../imgs/goldBG.jpg");
+     background-image: url("");
      background-color: orange;
      
  }
@@ -61,4 +61,10 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+button:active{
+    background-color: orange;
+}
+
+
 
