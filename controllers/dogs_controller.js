@@ -23,8 +23,8 @@ router.get("/api/dogs", function(req, res){
 router.post("/api/dogs", function(req, res){
 	db.Dog.create({
 		dog_name: req.body.dog_name,
-		dog_image: req.body.dog_image,
-		size: req.body.dog_size,
+		dog_image_url: req.body.dog_image,
+		dog_size: req.body.dog_size,
 		age: req.body.age,
 		activity_level: req.body.activity_level,
 		gender: req.body.gender,
@@ -33,6 +33,7 @@ router.post("/api/dogs", function(req, res){
 		dislikes: req.body.dislikes,
 		shelter_id: req.body.shelter_id
 	}).then (function(dbDog){
+		console.log("Adding new dog: ");
 		console.log(dbDog);
 		res.redirect("/index");
 	})
@@ -40,7 +41,13 @@ router.post("/api/dogs", function(req, res){
 
 //Route to get a specific dog
 router.get("/api/dogs/:id", function(req, res){
-
+	db.Dog.findOne({
+		where: {
+			id: req.params.id
+		}
+	}).then(function(dbDog){
+		res.json(dbDog);
+	});
 });
 
 //Route to update a specific dog
