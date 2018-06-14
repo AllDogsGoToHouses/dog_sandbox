@@ -11,7 +11,8 @@
 }
 
 .select-adopt {
-    width: 30%;
+    width: 200px;
+    margin: 1%;
 }
 #search-form, #adopter-info {
     margin-top: 2.75%;
@@ -22,10 +23,11 @@
 select{
     margin-bottom: 1%;
 }
-#facebook-signup, #google-signup{
+#facebook-signup, #google-signup, #email{
     margin-top: 1%;
     color: darkorange;
 }
+
 
 /* Shelter */
 #shelter-page {
@@ -38,7 +40,7 @@ select{
 
 .btn{
     margin: 1%;
-    width: 400px;
+    width: 200px;
 }
 
 #shelter-view{
@@ -102,6 +104,8 @@ select{
     top: 8px;
     left: 16px;
 }
+
+
 
 /* mobile */
 @media screen and (max-width: 500px) {

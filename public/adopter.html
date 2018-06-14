@@ -17,80 +17,74 @@
 </head>
 
 <main>
-    <body id="adopt-page">
-        <nav>
-            <div class="nav-wrapper navbar-fixed">
-                <a href="index.html" class="brand-logo center"><img id="logo" src="../public/assets/imgs/logo.png" alt="ADGTH Logo" /></a>
-                <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
-                <button class="right btn sign-up-btn">Sign Up</button>
-            </div>
-        </nav>
-
-        <div class="container">
-            <div ="adgth-text">
-                <h1 class="center">All Dogs Go to Houses</h1>
-                <h4>Every dog deserves a home <br>and every adopter a great match </h4>
-                <h5>Find your ideal pet match</h5>
-            </div>
-
-            <div id="search-form">        
-                <h6 id="preferences">Preferences</h6>
-                <select class="browser-default select-adopt">
-                    <option value="" disabled selected>Size</option>
-                    <option value="0">No Preference</option>
-                    <option value="1">Small</option>
-                    <option value="2">Medium</option>
-                    <option value="3">Large</option>
-                </select>
-                <select class="browser-default select-adopt">
-                    <option value="" disabled selected>Gender</option>
-                    <option value="0">No Preference</option>
-                    <option value="" disabled selected>Gender</option>
-                    <option value="1">Male</option>
-                    <option value="2">Male (Neutered)</option>
-                    <option value="3">Female</option>
-                    <option value="4">Female (Spayed)</option>
-                </select>
-                <select class="browser-default select-adopt">
-                    <option value="" disabled selected>Age</option>
-                    <option value="0">No Preference</option>
-                    <option value="1">Under 1 Year</option>
-                    <option value="2">Over 1 Year</option>
-                </select>
-                <select class="browser-default select-adopt">
-                    <option value="" disabled selected>Activity</option>
-                    <option value="0">No Preference</option>
-                    <option value="1">Let's Go Running</option>
-                    <option value="2">Playful</option>
-                    <option value="3">Couch Potato</option>
-                </select>
-
-                <div id="adopter-info" class=""> 
-                    <h6>Adopter Info</h6>
-                        <button id="google-signup" class="btn signup"><i class="fab fa-facebook-f "></i> Sign Up with Facebook</button> <br>
-                        <button id="facebook-signup" class="btn signup"><i class="fab fa-google-plus-g "></i> Sign Up with Google</button> 
-                </div>
-            </div> 
+<body id="adopt-page">
+    <nav>
+        <div class="nav-wrapper navbar-fixed">
+            <a href="index.html" class="brand-logo center"><img id="logo" src="assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+            <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
+            <button class="right btn sign-up-btn modal-trigger" href="#sign-up">Sign Up</button>
         </div>
+    </nav>
+    <div class="container">
+        <div ="adgth-text">
+            <h1 class="center">All Dogs Go to Houses</h1>
+            <h4>Every dog deserves a home <br>and every adopter a great match </h4>
+            <h5>Find your ideal pet match</h5>
+        </div>
+
+        <form id="search-form">        
+            <h6 id="preferences">Preferences</h6>
+            <select class="browser-default select-adopt">
+                <option value="" disabled selected>Size</option>
+                <option value="0">No Preference</option>
+                <option value="1">Small</option>
+                <option value="2">Medium</option>
+                <option value="3">Large</option>
+            </select>
+            <select class="browser-default select-adopt">
+                <option value="" disabled selected>Gender</option>
+                <option value="0">No Preference</option>
+                <option value="" disabled selected>Gender</option>
+                <option value="1">Male</option>
+                <option value="2">Male (Neutered)</option>
+                <option value="3">Female</option>
+                <option value="4">Female (Spayed)</option>
+            </select>
+            <select class="browser-default select-adopt">
+                <option value="" disabled selected>Age</option>
+                <option value="0">No Preference</option>
+                <option value="1">Under 1 Year</option>
+                <option value="2">Over 1 Year</option>
+            </select>
+            <select class="browser-default select-adopt">
+                <option value="" disabled selected>Activity</option>
+                <option value="0">No Preference</option>
+                <option value="1">Let's Go Running</option>
+                <option value="2">Playful</option>
+                <option value="3">Couch Potato</option>
+            </select>
+
+            <button id="fetch" class="btn"><i class="fas fa-paw"></i> Fetch </button> 
+        </form> 
+    </div>
 </main>
 <footer>
-    <div class="footer-copyright center footer-fixed">
-        <div class="container align-right">
-            © 2018 ADGTH
-        </div>
+<div class="footer-copyright center footer-fixed">
+    <div class="container align-right">
+        © 2018 ADGTH
     </div>
+</div>
 </footer>
-        <!-- JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="../public/assets/js/app.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-    </body>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="../public/assets/js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</body>
 </html>
 
 
         
 <!-- Side Nav -->
-
 <ul id="slide-out" class="sidenav">
     <span id="side-nav-body">
         <span id="side-nav-article">
@@ -98,7 +92,7 @@
                 <li>
                     <div class="user-view">
                         <div class="background">
-                            <img id="menu-1" class="right-align" src="../public/assets/imgs/logo.png">
+                            <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
                         </div>
                     </div>
                 </li>
@@ -113,11 +107,27 @@
             </span>    
                 <footer id="side-nav-footer">
                     <div id="login" class="row">
-                        <p class="sign-in">Sign in: </p>
-                        <li><button class="btn col s5"><i class="fab fa-facebook-f"> </i></button></li>
-                        <li><button class="btn col s5"><i class="fab fa-google-plus-g"> </i></button></li>
+
                     </div>
                 </footer>
         </span>
     </span>
 </ul>
+
+
+
+<!-- Sign Up Modal -->
+<div id="sign-up" class="modal">
+        <div class="modal-content ">
+        <h4>Sign-Up</h4>
+            <div id="signup-holder" class="center">
+                <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
+                <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+                <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
+        </div>
+</div>

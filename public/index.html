@@ -79,20 +79,10 @@
                         <!-- Remove this -->
                         <li><a href="results.html">Results</a></li>
             </span>    
-                <footer id="side-nav-footer">
-                    <div id="login" class="row">
-
-                    </div>
-                </footer>
+                <footer id="side-nav-footer"></footer>
         </span>
     </span>
 </ul>
-    <!-- JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="../public/assets/js/app.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
-</body>
-</html>
 
 
 <!-- Sign Up Modal -->
@@ -100,63 +90,14 @@
         <div class="modal-content ">
         <h4>Sign-Up</h4>
             <div id="signup-holder" class="center">
-                <button class="btn col s4" id="email"><i class="material-icons ">email</i> Sign-Up with E-Mail </button>
-                <button class="btn col s4"><i class="fab fa-facebook-f"></i> Sign-Up with Facebook </button>
-                <button class="btn col s4"><i class="fab fa-google-plus-g"></i> Sign-Up with Google </button>
+                <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
+                <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+                <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
             </div>
         </div>
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
         </div>
 </div>
 
-<!-- Email Sign Up -->
-<div id="sign-up-modal" class="modal">
-    <div class="modal-content">
-        <h4>Sign-Up</h4>
-
-        <div id="email-signup"></div>
-        <!-- <form class="center">
-            <div id="adopter-signup container">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="row">
-                    <div class="input-field col s12">
-                        <input id="email" type="text" class="validate">
-                        <label for="email">Email</label>
-                    </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <button class="btn">Sign-Up</button>
-                    </div>
-                </div>
-            </div>
-            <div id="sign-up-btns"> 
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a> -->
-                </div>
-            </div>
-        </form>
-    </div>
-</div>
-
-<script>
-// Delete Favorite Cards
-$(".delete-btn").on("click", function(){
-    console.log("Removed from favorites.")
-})
-
-
-// Sign Up with Email
-$("#email").on("click", function(){
-    console.log("works")
-    signUpType = "email"
-    signUp(email)
-})
-
-
-</script>
