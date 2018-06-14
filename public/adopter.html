@@ -5,15 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADGTH | Adopt A Pet</title>
-
-        <!-- Materialize -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
-        <!-- FontAwesome: Google & Facebook Icons -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../public/assets/css/style.css">
-        <link rel="stylesheet" href="../public/assets/css/body.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/body.css">
 </head>
 
 <main>
@@ -34,14 +30,14 @@
 
         <form id="search-form">        
             <h6 id="preferences">Preferences</h6>
-            <select class="browser-default select-adopt">
+            <select id="size" class="browser-default select-adopt">
                 <option value="" disabled selected>Size</option>
                 <option value="0">No Preference</option>
                 <option value="1">Small</option>
                 <option value="2">Medium</option>
                 <option value="3">Large</option>
             </select>
-            <select class="browser-default select-adopt">
+            <select id="gender" class="browser-default select-adopt">
                 <option value="" disabled selected>Gender</option>
                 <option value="0">No Preference</option>
                 <option value="" disabled selected>Gender</option>
@@ -50,13 +46,13 @@
                 <option value="3">Female</option>
                 <option value="4">Female (Spayed)</option>
             </select>
-            <select class="browser-default select-adopt">
+            <select id="age" class="browser-default select-adopt">
                 <option value="" disabled selected>Age</option>
                 <option value="0">No Preference</option>
                 <option value="1">Under 1 Year</option>
                 <option value="2">Over 1 Year</option>
             </select>
-            <select class="browser-default select-adopt">
+            <select id="activity_level"class="browser-default select-adopt">
                 <option value="" disabled selected>Activity</option>
                 <option value="0">No Preference</option>
                 <option value="1">Let's Go Running</option>
@@ -64,7 +60,7 @@
                 <option value="3">Couch Potato</option>
             </select>
 
-            <button id="fetch" class="btn"><i class="fas fa-paw"></i> Fetch </button> 
+            <button id="search" class="btn"><i class="fas fa-paw"></i> Fetch </button> 
         </form> 
     </div>
 </main>
@@ -77,7 +73,7 @@
 </footer>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="../public/assets/js/app.js"></script>
+    <script src="assets/js/app.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
 </body>
 </html>
@@ -99,17 +95,11 @@
             </span>
             <span id="side-nav-main">
                 <div id="side-menu">
-                        <li><a href="shelter.html">Shelter</a></li>
-                        <li><a href="adopter.html">Adopt</a></li>
-                        <li><a href="faves.html">Favorites</a></li>
-                        <!-- Remove this -->
-                        <li><a href="results.html">Results</a></li>
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="adopter.html">Adopt</a></li>
+                    <li><a href="faves.html">Favorites</a></li>
             </span>    
-                <footer id="side-nav-footer">
-                    <div id="login" class="row">
-
-                    </div>
-                </footer>
+                <footer id="side-nav-footer"></footer>
         </span>
     </span>
 </ul>
@@ -118,16 +108,16 @@
 
 <!-- Sign Up Modal -->
 <div id="sign-up" class="modal">
-        <div class="modal-content ">
-        <h4>Sign-Up</h4>
-            <div id="signup-holder" class="center">
-                <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
-                <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
-                <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
-            </div>
+    <div class="modal-content ">
+    <h4>Sign-Up</h4>
+        <div id="signup-holder" class="center">
+            <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
+            <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+            <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
         </div>
-        <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
-            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
-        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
+        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
+    </div>
 </div>
