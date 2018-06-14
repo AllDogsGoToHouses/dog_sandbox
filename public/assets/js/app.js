@@ -49,12 +49,8 @@ function showResults(imageURL, name, dogInfo){
 
 }
 
-// Delete Favorite Cards
-$(".delete-btn").on("click", function(){
-    console.log("Removed from favorites.")
-})
+function signUp(signUpType){
+    $("#signup-holder").html(signUpType)
+}
 
-// To Do 
-// Disable Right Swipe of Carousel
-// Link Database Values to show on page
-// Format Search Results Card
+
