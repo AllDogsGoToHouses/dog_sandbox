@@ -15,3 +15,7 @@ module.exports = function(sequelize, DataTypes) {
   });
   return Shelter;
 };    
+
+$("#add-shelter-button").on("click", function(){
+  alert("Shelter Added")
+})
