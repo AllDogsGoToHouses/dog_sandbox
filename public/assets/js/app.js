@@ -76,6 +76,8 @@ function signUp(signUpType){
 
     if (signUpType = "email"){
         console.log("Signing up with email")
+    } else{
+        signUpType = "facebook"
     }
 }
 

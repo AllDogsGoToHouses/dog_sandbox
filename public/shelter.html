@@ -4,16 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        
         <title>ADGTH | Shelter Home</title>
-        <!-- Materialize -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
-        <!-- FontAwesome: Google & Facebook Icons -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="../public/assets/css/style.css">
-        <link rel="stylesheet" href="../public/assets/css/body.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/body.css">
     </head>
 <main>
     <body id="shelter-page">
@@ -53,16 +49,14 @@
     </div>
 </footer>
 
-        <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-        <script src="../public/assets/js/app.js"></script>
+        <script src="/models/dog.js"></script>
+        <script src="/models/shelter.js"></script>
+        <script src="assets/js/app.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     </body>
 </html>
 
-
-
-<!-- Inside Modal/Nav -->
 
 <!-- Shelter Modal -->
 <div id="add-shelter" class="modal">
@@ -83,23 +77,19 @@
                 </div>    
                 <div class="row">
                     <h6>Manager Info</h6>
-                    <div class="input-field col s6">
-                        <input id="first_name" type="text" class="validate">
-                        <label for="first_name">First Name</label>
-                    </div>
-                    <div class="input-field col s6">
-                        <input id="last_name" type="text" class="validate">
-                        <label for="last_name">Last Name</label>
+                    <div class="input-field col s12">
+                        <input id="manager" type="text" class="validate">
+                        <label for="manager">Full Name</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email</label>
+                        <input id="shelter_email" type="email" class="validate">
+                        <label for="shelter_email">Email</label>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a href="#!" class="waves-effect waves-green btn-flat">Create</a>
+                    <a href="#!" class="waves-effect waves-green btn-flat" id="add-shelter-button">Create</a>
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
                 </div>
             </div>
@@ -116,26 +106,30 @@
             <div id="dog-form">
                 <div class="row">
                     <h6>Shelter Info</h6>
-                    <div id="dog-select" class="col s12">
+                    <div id="shelter_id" class="col s12">
                         <select class="browser-default">
-                        <option value="" disabled selected>Select Shelter</option>
+                        <option disabled selected>Select Shelter</option>
                         <option value="1">Shelter 1</option>
                         <option value="2">Shelter 2</option>
                         <option value="3">Shelter 3</option>
                         </select>
                     </div>
                     <h6 class="mod-subtitle">Dog Info</h6>
-                    <div class="input-field col s6">
+                    <div class="input-field col s4">
                         <input id="dog_name" type="text" class="validate">
                         <label for="dog_name">Name</label>
                     </div>
-                    <div class="input-field col s6">
-                        <input id="dog-img-url" type="text" class="validate">
-                        <label for="dog-img-url">Image URL</label>
-                    </div>                            
+                    <div class="input-field col s4">
+                        <input id="dog_img_url" type="text" class="validate">
+                        <label for="dog_img_url">Image URL</label>
+                    </div>
+                    <div class="input-field col s4">
+                        <input id="breed" type="text" class="validate">
+                        <label for="breed">Breed</label>
+                    </div>                             
                 </div>  
                 <div class="row">
-                   <div id="dog-select-size" class="col s3">
+                   <div id="dog_size" class="col s3">
                         <select class="browser-default">
                             <option value="" disabled selected>Size</option>
                             <option value="1">Small</option>
@@ -143,7 +137,7 @@
                             <option value="3">Large</option>
                         </select>
                     </div> 
-                    <div id="dog-select-gender" class="col s3">
+                    <div id="gender" class="col s3">
                         <select class="browser-default">
                             <option value="" disabled selected>Gender</option>
                             <option value="1">Male</option>
@@ -170,34 +164,34 @@
                 </div> 
                 <div class="row">
                    <div class="input-field col s4">
-                        <input class="dog-likes" type="text" class="validate">
-                        <label for="dog-likes">Like 1</label>
+                        <input class="likes" type="text" class="validate">
+                        <label for="likes">Like 1</label>
                     </div>   
                     <div class="input-field col s4">
-                        <input class="dog-likes" type="text" class="validate">
-                        <label for="dog-likes">Like 2</label>
+                        <input class="likes" type="text" class="validate">
+                        <label for="likes">Like 2</label>
                     </div>     
                     <div class="input-field col s4">
-                        <input class="dog-likes" type="text" class="validate">
-                        <label for="dog-likes">Like 3</label>
+                        <input class="likes" type="text" class="validate">
+                        <label for="likes">Like 3</label>
                     </div>                                                   
                 </div>  
                 <div class="row">
                    <div class="input-field col s4">
-                        <input class="dog-dislikes" type="text" class="validate">
-                        <label for="dog-dislikes">Dislike 1</label>
+                        <input class="dislikes" type="text" class="validate">
+                        <label for="dislikes">Dislike 1</label>
                     </div>   
                     <div class="input-field col s4">
-                        <input class="dog-dislikes" type="text" class="validate">
-                        <label for="dog-dislikes">Dislike 2</label>
+                        <input class="dislikes" type="text" class="validate">
+                        <label for="dislikes">Dislike 2</label>
                     </div>     
                     <div class="input-field col s4">
-                        <input class="dog-dislikes" type="text" class="validate">
-                        <label for="dog-dislikes">Dislike 3</label> 
+                        <input class="dislikes" type="text" class="validate">
+                        <label for="dislikes">Dislike 3</label> 
                     </div>
                 </div>                                                    
                 <div class="modal-footer">
-                    <a href="#!" class="waves-effect waves-green btn-flat">Add Dog</a>
+                    <a href="#!" class="waves-effect waves-green btn-flat" id="add-dog-button">Add Dog</a>
                     <a href="#!" class="modal-close waves-effect waves-green btn-flat">Done</a>
                 </div> 
             </div>
@@ -224,8 +218,6 @@
                         <li><a href="shelter.html">Shelter</a></li>
                         <li><a href="adopter.html">Adopt</a></li>
                         <li><a href="faves.html">Favorites</a></li>
-                        <!-- Remove this -->
-                        <li><a href="results.html">Results</a></li>
             </span>    
                 <footer id="side-nav-footer">
                     <div id="login" class="row">
