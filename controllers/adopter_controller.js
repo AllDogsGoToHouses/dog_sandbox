@@ -38,9 +38,17 @@ router.get("/api/adopter/:id", function(req, res){
 	});
 });
 
-//Route to update an adopter profile?
+//Route to update adopter's favorites
 router.put("/api/adopter/:id", function(req, res){
-
+	db.Adopter.update({
+		adopter_favorites: req.body.adopter_favorites
+	},{
+		where: {
+			id: req.params.id
+		}
+	}).then(function(dbAdopter){
+		res.json(dbAdopter);
+	})
 });
 
 module.exports = router;
