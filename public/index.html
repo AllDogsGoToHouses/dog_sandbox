@@ -18,7 +18,7 @@
             <div class="nav-wrapper navbar-fixed">
                 <a href="index.html" class="brand-logo center"><img id="logo" src="assets/imgs/logo.png" alt="ADGTH Logo" /></a>
                 <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
-                <button class="right btn sign-up-btn modal-trigger" href="#sign-up">Sign Up</button>
+                <button class="right btn sign-up-btn modal-trigger" href="#log-in">Log In</button>
             </div>
         </nav>
     <div class="container">
@@ -81,18 +81,69 @@
 
 
 <!-- Sign Up Modal -->
-<div id="sign-up" class="modal">
+<div id="log-in" class="modal signup-modal">
     <div class="modal-content ">
-    <h4>Sign-Up</h4>
+    <div class="mod-title"><h5>Log In<a href="#!" class="modal-close back"><i class="right fas fa-times"></i></h5></div></a>
         <div id="signup-holder" class="center">
-            <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
-            <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
-            <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
+            <button class="btn col s4 waves-effect waves-orange signup-btns " id="email-login"><i class="fas fa-envelope"></i> Email </button>
+            <button class="btn col s4 waves-effect waves-orange signup-btns" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+            <button class="btn col s4 waves-effect waves-orange signup-btns" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button><br>
+            <div class="divider"></div><br><br>
+            <button class="btn signup-btns" id="create-account">Create account</button>
+ 
         </div>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
-        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
     </div>
 </div>
 
+
+<script>
+var signUpHolder = $("#signup-holder")
+
+    // Opens Email Login
+$("#email-login").on("click", function(){
+    signUpHolder.html(`
+      <div class="container">
+        <div class="row" style="display: inline-block;">
+          <form class="col s12" method="post">
+            <div class='row'>
+              <div class='col s12'>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='email' name='email' id='email' />
+                <label for='email'>Enter your email</label>
+              </div>
+            </div>
+
+            <div class='row'>
+              <div class='input-field col s12'>
+                <input class='validate' type='password' name='password' id='password' />
+                <label for='password'>Enter your password</label>
+              </div>
+              <label style='float: right;'>
+								<a href='#!'><b>Forgot Password?</b></a>
+							</label>
+            </div>
+
+            <br />
+            <center>
+              <div class='row'>
+                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect signup-btns'>Login</button>
+              </div>
+            </center>
+          </form>
+        </div>
+      </div>
+    </center>
+
+    <div class="section"></div>
+    <div class="section"></div>
+  </main>
+    
+    
+    
+    `)
+})
+</script>
