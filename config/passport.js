@@ -2,6 +2,8 @@
 
 var passport = require('passport'),
 LocalStrategy = require('passport-local').Strategy,
+FacebookStrategy = require('passport-facebook').Strategy,
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy
 models = require('../models');
 
 module.exports = function(app){
@@ -39,6 +41,41 @@ module.exports = function(app){
       });
     }
   ));
+
+//For Facebook purposes
+
+passport.use(new FacebookStrategy({
+    clientID: FACEBOOK_APP_ID,
+    clientSecret: FACEBOOK_APP_SECRET,
+    callbackURL: "http://www.example.com/auth/facebook/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOrCreate(..., function(err, user) {
+      if (err) { return done(err); }
+      done(null, user);
+    });
+  }
+));
+
+//App ID:2264312023796212
+//App Secret: 0081ba218e2c3948295b0800dab51a82
+
+//For Google purposes
+
+passport.use(new GoogleStrategy({
+    consumerKey: GOOGLE_CONSUMER_KEY,
+    consumerSecret: GOOGLE_CONSUMER_SECRET,
+    callbackURL: "http://www.example.com/auth/google/callback"
+  },
+  function(token, tokenSecret, profile, done) {
+      User.findOrCreate({ googleId: profile.id }, function (err, user) {
+        return done(err, user);
+      });
+  }
+));
+
+//Consumer Key: 203181443734-2lpvhhbuvuk4regqjilh0skqontijsl4.apps.googleusercontent.com
+//Consumer Secret: _QUr3S-2MgXiHHEhCew-7wQH
 
 // For Signup purposes
 
