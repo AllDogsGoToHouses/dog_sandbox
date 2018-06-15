@@ -15,7 +15,11 @@ module.exports = function(sequelize, DataTypes) {
   },{
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
+         Dog.belongsTo(models.Shelter,{
+          foreignKey: {
+            allowNull: false
+          }
+        });
       }
     }
   });

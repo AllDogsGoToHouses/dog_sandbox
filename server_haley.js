@@ -14,9 +14,13 @@ app.use(express.static("public"));
 // =============================================================
 // require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
-var routes = require("./controllers/dogs_controller.js");
+var routes_dogs = require("./controllers/dogs_controller.js");
+var routes_adopter = require("./controllers/adopter_controller.js");
+var routes_shelter = require("./controllers/shelter_controller.js");
 
-app.use(routes);
+app.use( routes_dogs);
+app.use( routes_adopter);
+app.use( routes_shelter);
 
 db.sequelize.sync().then(function(){
   app.listen(PORT, function(){
@@ -27,22 +31,22 @@ db.sequelize.sync().then(function(){
 })
 
 //Facebook
-app.get('/auth/facebook',
-  passport.authenticate('facebook'));
+// app.get('/auth/facebook',
+//   passport.authenticate('facebook'));
 
-app.get('/auth/facebook/callback',
-  passport.authenticate('facebook', { failureRedirect: '/login' }),
-  function(req, res) {
-    // Successful authentication, redirect home.
-    res.redirect('/');
-  });
+// app.get('/auth/facebook/callback',
+//   passport.authenticate('facebook', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     // Successful authentication, redirect home.
+//     res.redirect('/');
+//   });
 
-//Google
-app.get('/auth/google',
-  passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' });
+// //Google
+// app.get('/auth/google',
+//   passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' });
 
-app.get('/auth/google/callback', 
-  passport.authenticate('google', { failureRedirect: '/login' }),
-  function(req, res) {
-    res.redirect('/');
-  });
+// app.get('/auth/google/callback', 
+//   passport.authenticate('google', { failureRedirect: '/login' }),
+//   function(req, res) {
+//     res.redirect('/');
+//   });
