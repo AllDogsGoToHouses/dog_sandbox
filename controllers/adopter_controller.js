@@ -9,8 +9,8 @@ router.get("/api/adopter", function(req, res){
     db.Dog.findAll({
     	attributes: { exclude: ['createdAt','updatedAt'] } 
     })
-      .then(function(dbDogs) {
-        res.json(dbDogs);
+      .then(function(dbAdopters) {
+        res.json(dbAdopters);
       });
 })
 
@@ -27,19 +27,19 @@ router.post("/api/adopter", function(req, res){
 	})
 });
 
-//Route to get a specific dog
-router.get("/api/dogs/:id", function(req, res){
-	db.Dog.findOne({
+//Route to get a specific Adopter, should load profile page??
+router.get("/api/adopter/:id", function(req, res){
+	db.Adopter.findOne({
 		where: {
 			id: req.params.id
 		}
-	}).then(function(dbDog){
-		res.json(dbDog);
+	}).then(function(dbAdopter){
+		res.json(dbAdopter);
 	});
 });
 
-//Route to update a specific dog
-router.put("/api/dogs/:id", function(req, res){
+//Route to update an adopter profile?
+router.put("/api/adopter/:id", function(req, res){
 
 });
 
