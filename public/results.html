@@ -5,28 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ADGTH | Adopt A Pet</title>
-
-        <!-- Materialize -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
-        <!-- FontAwesome: Google & Facebook Icons -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/body.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Viga" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/body.css">
 </head>
 
-<main>  
+<main>
     <body id="results-page">
         <nav>
             <div class="nav-wrapper navbar-fixed">
                 <a href="index.html" class="brand-logo center"><img id="logo" src="assets/imgs/logo.png" alt="ADGTH Logo" /></a>
                 <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
-                <button class="right btn sign-up-btn">Sign Up</button>
+                <button class="right btn sign-up-btn modal-trigger" href="#sign-up">Sign Up</button>
             </div>
         </nav>
-
         <div class="container ">
             <h1 class="center" id="search-results">Search Results</h1>
             <span class="col s1 push-s5 mobile-hide">
@@ -36,14 +30,12 @@
             <!-- Results Div -->
             <div class="center valign">
                 <div class="row">
-                    <!-- <div id="dog-holder"> -->
-                            <div class="carousel carousel-slider">
-                                    <a class="carousel-item s8" href="#one!"><div class="dog-holder"></div></a>
-                                    <a class="carousel-item s8" href="#two!"> <div class="dog-holder"></div></a>
-                                    <a class="carousel-item s8" href="#three!"><div class="dog-holder"></div></a>
-                                    <a class="carousel-item s8" href="#four!"> <div class="dog-holder"></div></a>
-                                </div>
-                    <!-- </div> -->
+                    <div class="carousel carousel-slider">
+                        <a class="carousel-item s8" href="#one!"><div class="dog-holder"></div></a>
+                        <a class="carousel-item s8" href="#two!"> <div class="dog-holder"></div></a>
+                        <a class="carousel-item s8" href="#three!"><div class="dog-holder"></div></a>
+                        <a class="carousel-item s8" href="#four!"> <div class="dog-holder"></div></a>
+                    </div>
                 </div>    
             </div>
 </main>
@@ -65,35 +57,44 @@
 
         
 <!-- Side Nav -->
-
 <ul id="slide-out" class="sidenav">
-        <span id="side-nav-body">
-            <span id="side-nav-article">
-                <span id="side-nav-header">                
-                    <li>
-                        <div class="user-view">
-                            <div class="background">
-                                <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
-                            </div>
+    <span id="side-nav-body">
+        <span id="side-nav-article">
+            <span id="side-nav-header">                
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
                         </div>
-                    </li>
-                </span>
-                <span id="side-nav-main">
-                    <div id="side-menu">
-                            <li><a href="shelter.html">Shelter</a></li>
-                            <li><a href="adopter.html">Adopt</a></li>
-                            <li><a href="faves.html">Favorites</a></li>
-                            <!-- Remove this -->
-                            <li><a href="results.html">Results</a></li>
-                </span>    
-                        <footer id="side-nav-footer">
-                            <div id="login" class="row">
-                                <p class="sign-in">Sign in: </p>
-                                <li><button class="btn col s5"><i class="fab fa-facebook-f"> </i></button></li>
-                                <li><button class="btn col s5"><i class="fab fa-google-plus-g"> </i></button></li>
-                            </div>
-                        </footer>
                     </div>
+                </li>
             </span>
+            <span id="side-nav-main">
+                <div id="side-menu">
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="adopter.html">Adopt</a></li>
+                    <li><a href="faves.html">Favorites</a></li>
+                </div>
+            </span>    
+                <footer id="side-nav-footer"></footer>
         </span>
-    </ul>
+    </span>
+</ul>
+
+
+
+<!-- Sign Up Modal -->
+<div id="sign-up" class="modal">
+    <div class="modal-content ">
+    <h4>Sign-Up</h4>
+        <div id="signup-holder" class="center">
+            <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
+            <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+            <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
+        <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
+    </div>
+</div>

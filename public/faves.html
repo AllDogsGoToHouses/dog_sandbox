@@ -20,8 +20,9 @@
     <body id="faves-page">
         <nav>
             <div class="nav-wrapper navbar-fixed">
-                <a href="adopter.html" class="brand-logo center"><img id="logo" src="assets/imgs/logo.png" alt="ADGTH Logo" /></a>
+                <a href="index.html" class="brand-logo center"><img id="logo" src="assets/imgs/logo.png" alt="ADGTH Logo" /></a>
                 <span href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a></span>
+                <button class="right btn sign-up-btn modal-trigger" href="#sign-up">Sign Up</button>
             </div>
         </nav>
 
@@ -52,46 +53,45 @@
     </body>
 </html>
 
+        
 <!-- Side Nav -->
-
 <ul id="slide-out" class="sidenav">
-        <span id="side-nav-body">
-            <span id="side-nav-article">
-                <span id="side-nav-header">                
-                    <li>
-                        <div class="user-view">
-                            <div class="background">
-                                <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
-                            </div>
+    <span id="side-nav-body">
+        <span id="side-nav-article">
+            <span id="side-nav-header">                
+                <li>
+                    <div class="user-view">
+                        <div class="background">
+                            <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
                         </div>
-                    </li>
-                </span>
-                <span id="side-nav-main">
-                    <div id="side-menu">
-                            <li><a href="shelter.html">Shelter</a></li>
-                            <li><a href="adopter.html">Adopt</a></li>
-                            <li><a href="faves.html">Favorites</a></li>
-                            <!-- Remove this -->
-                            <li><a href="results.html">Results</a></li>
-                </span>    
-                    <footer id="side-nav-footer">
-                        <div id="login" class="row">
-                            <p class="sign-in">Sign in: </p>
-                            <li><button class="btn col s5"><i class="fab fa-facebook-f"> </i></button></li>
-                            <li><button class="btn col s5"><i class="fab fa-google-plus-g"> </i></button></li>
-                        </div>
-                    </footer>
-                </div>
+                    </div>
+                </li>
             </span>
+            <span id="side-nav-main">
+                <div id="side-menu">
+                    <li><a href="shelter.html">Shelter</a></li>
+                    <li><a href="adopter.html">Adopt</a></li>
+                    <li><a href="faves.html">Favorites</a></li>
+            </span>    
+                <footer id="side-nav-footer"></footer>
         </span>
-    </ul>
-  <!-- Modal Structure -->
-  <div id="modal" class="modal">
-    <div class="modal-content">
-      <h4>Modal Header</h4>
-      <p>A bunch of text</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
-  </div>
+    </span>
+</ul>
+
+
+
+<!-- Sign Up Modal -->
+<div id="sign-up" class="modal">
+        <div class="modal-content ">
+        <h4>Sign-Up</h4>
+            <div id="signup-holder" class="center">
+                <button class="btn col s4 waves-effect waves-orange btn " id="e-signup"><i class="fas fa-envelope"></i> Email </button>
+                <button class="btn col s4 waves-effect waves-orange btn" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
+                <button class="btn col s4 waves-effect waves-orange" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat">Close</a>
+            <a href="#!" class="modal-close waves-effect waves-yellow btn-flat back">Back</a>
+        </div>
+</div>

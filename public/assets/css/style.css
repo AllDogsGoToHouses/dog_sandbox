@@ -26,8 +26,13 @@ body {
     background-color: 	#ff9f00	;
     color: white;
 }
+.signup-btns:hover{
+    background-color: teal; 
+
+
+}
  #menu-1{
-     background-image: url("../imgs/goldBG.jpg");
+     background-image: url("");
      background-color: orange;
      
  }
@@ -61,4 +66,10 @@ body {
   main {
     flex: 1 0 auto;
   }
+
+button:active{
+    background-color: orange;
+}
+
+
 
