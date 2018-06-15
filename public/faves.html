@@ -49,48 +49,52 @@
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="assets/js/app.js"></script>
+        <script src="assets/js/login.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     </body>
 </html>
 
         
+
+        
 <!-- Side Nav -->
 <ul id="slide-out" class="sidenav">
-    <span id="side-nav-body">
-        <span id="side-nav-article">
-            <span id="side-nav-header">                
-                <li>
-                    <div class="user-view">
-                        <div class="background">
-                            <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
+        <span id="side-nav-body">
+            <span id="side-nav-article">
+                <span id="side-nav-header">                
+                    <li>
+                        <div class="user-view">
+                            <div class="background">
+                                <img id="menu-1" class="right-align" src="assets/imgs/logo.png">
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
+                </span>
+                <span id="side-nav-main">
+                    <div id="side-menu">
+                            <li><a href="shelter.html">Shelter</a></li>
+                            <li><a href="adopter.html">Adopt</a></li>
+                            <li><a href="faves.html">Favorites</a></li>
+                </span>    
+                    <footer id="side-nav-footer"> </footer>
             </span>
-            <span id="side-nav-main">
-                <div id="side-menu">
-                    <li><a href="shelter.html">Shelter</a></li>
-                    <li><a href="adopter.html">Adopt</a></li>
-                    <li><a href="faves.html">Favorites</a></li>
-            </span>    
-                <footer id="side-nav-footer"></footer>
         </span>
-    </span>
-</ul>
-
-
-
-<!-- Sign Up Modal -->
-<div id="log-in" class="modal signup-modal">
-    <div class="modal-content ">
-    <div class="mod-title"><h5>Log In<a href="#!" class="modal-close back"><i class="right fas fa-times"></i></h5></div></a>
-        <div id="signup-holder" class="center">
-            <button class="btn col s4 waves-effect waves-orange signup-btns " id="email-login"><i class="fas fa-envelope"></i> Email </button>
-            <button class="btn col s4 waves-effect waves-orange signup-btns" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button><br>
-            <button class="btn col s4 waves-effect waves-orange signup-btns" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button><br>
-            <div class="divider"></div><br><br>
-            <button class="btn signup-btns" id="create-account">Create account</button>
- 
+    </ul>
+    
+    
+    
+    <!-- Sign Up Modal -->
+    <div id="log-in" class="modal signup-modal">
+        <div class="modal-content ">
+        <div class="mod-title"><h5 id="create-account">Log In<a href="#!" class="modal-close back"><i class="right fas fa-times"></i></h5></div></a>
+            <div id="login-holder" class="center">
+                <button class="btn col s4 waves-effect waves-orange signup-btns email-login"><i class="fas fa-envelope"></i> Email </button>
+                <button class="btn col s4 waves-effect waves-orange signup-btns" id="facebook"><i class="fab fa-facebook-f"></i> Facebook </button></a><br>
+                <button class="btn col s4 waves-effect waves-orange signup-btns" id="gmail"><i class="fab fa-google-plus-g"></i> Google </button></a><br>
+                <div class="divider"></div><br><br>
+                <button class="btn signup-btns create-account">Create account</button>
+            </div>
         </div>
     </div>
-</div>
+    
+    

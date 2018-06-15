@@ -12,8 +12,6 @@ $("#create-account").on("click", function(){
 
 })
 
-
-
   // Sign Up Buttons
 $("#email").on("click", function(){
     signUpType = "email"
@@ -90,3 +88,10 @@ function signUp(signUpType){
 }
 
 
+var loginHolder = $("#login-holder")
+var emailLogin = $(".email-login")
+
+// Opens Email Login
+emailLogin.on("click", function(){
+  console.log("This Works")
+})
