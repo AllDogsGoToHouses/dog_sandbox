@@ -35,6 +35,7 @@ router.post("/api/dogs", function(req, res){
 	}).then (function(dbDog){
 		console.log("Adding new dog: ");
 		console.log(dbDog);
+		//TODO: Do we want this action to redirect to the homepage?
 		res.redirect("/index");
 	})
 });
