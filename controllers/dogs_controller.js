@@ -42,6 +42,7 @@ router.post("/api/dogs", function(req, res){
 
 //Route to get a specific dog
 router.get("/api/dogs/:id", function(req, res){
+	console.log("Request dog " + req.params.id);
 	db.Dog.findOne({
 		where: {
 			id: req.params.id
