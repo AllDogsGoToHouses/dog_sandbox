@@ -25,3 +25,24 @@ db.sequelize.sync().then(function(){
 
   })
 })
+
+//Facebook
+app.get('/auth/facebook',
+  passport.authenticate('facebook'));
+
+app.get('/auth/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/');
+  });
+
+//Google
+app.get('/auth/google',
+  passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' });
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    res.redirect('/');
+  });
