@@ -1,16 +1,18 @@
 var express = require('express')
+var exphbs  = require('express-handlebars');
 var app = express()
 var bodyParser = require('body-parser')
 var db = require("./models/index.js")
 var PORT = process.env.PORT || 3000
 var path = require("path")
-var exphbs  = require('express-handlebars');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
 app.use(express.static("public"));
+app.engine('handlebars', exphbs({defaultLayout: 'layout'}));
+app.set('view engine', 'handlebars');
 
 // Routes
 // =============================================================
