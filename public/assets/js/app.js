@@ -6,10 +6,49 @@ $(document).ready(function(){
     $('.carousel.carousel-slider').carousel({fullWidth: true});
     //load by static id for adopter
     //update later to pull from cookie
-    $.get("/api/adopter/1", function(data){
-        console.log(data)
+    $.get("/api/adopter/1", function(adopter_data){
+        console.log(adopter_data)
+        $.get("/api/dogs", function(dogs_data){
+            console.log(dogs_data)
+            dogVars(dogs_data)
+        })
     })
+
+   
   })
+
+//dog variables
+  function dogVars(dogsArray) {
+
+    var dog_id  
+    var dog_name
+    var dog_image_url 
+    var dog_size
+    var age
+    var activity_level
+    var gender
+    var breed
+    var likes
+    var dislikes
+    var shelter_id
+    
+    for(var i=0;i<5;i++) {
+      console.log("It works", i);
+      dog_id = dogsArray[i].dog_id
+      dog_name = dogsArray[i].dog_name
+      dog_image_url = dogsArray[i].dog_image_url
+      dog_size = dogsArray[i].dog_size
+      age = dogsArray[i].age
+      gender = dogsArray[i].activity_level
+      breed = dogsArray[i].breed
+      likes = dogsArray[i].likes
+      dislikes = dogsArray[i].dislikes
+      shelter_id = dogsArray[i].shelter_id
+    
+    
+      console.log(dog_id,dog_name,dog_size,age,activity_level,gender,breed,likes,dislikes,shelter_id)
+    }
+    } 
 
 // Create Account
 $("#create-account").on("click", function(){
@@ -46,9 +85,7 @@ $("#add-fave").on("click", function(){
 
 // Show Search Results
 $("#dog-result").on("click", function(){
-    $.get("/api/dogs/1", function(data){
-        console.log(data)
-    })
+    
     //showResults(imageURL,name,dogInfo)
     // Add to favorites
     $(".add").on("click", function(){
