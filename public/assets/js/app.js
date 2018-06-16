@@ -4,6 +4,11 @@ $(document).ready(function(){
     $('.sidenav').sidenav()
     $('.tooltipped').tooltip()
     $('.carousel.carousel-slider').carousel({fullWidth: true});
+    //load by static id for adopter
+    //update later to pull from cookie
+    $.get("/api/adopter/1", function(data){
+        console.log(data)
+    })
   })
 
 // Create Account
@@ -41,7 +46,10 @@ $("#add-fave").on("click", function(){
 
 // Show Search Results
 $("#dog-result").on("click", function(){
-    showResults(imageURL,name,dogInfo)
+    $.get("/api/dogs/1", function(data){
+        console.log(data)
+    })
+    //showResults(imageURL,name,dogInfo)
     // Add to favorites
     $(".add").on("click", function(){
         alert("Added to Favorites")
