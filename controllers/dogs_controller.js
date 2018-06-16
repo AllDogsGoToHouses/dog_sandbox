@@ -52,6 +52,17 @@ router.get("/api/dogs/:id", function(req, res){
 	});
 });
 
+router.get("/api/dogs/byshelter/:id", function(req, res){
+	console.log("Got get for /api/dogs")
+    db.Dog.findAll({
+    	where: {
+    		shelter_id: req.params.id
+    	}
+    }).then(function(dbDogs) {
+	    res.json(dbDogs);
+	});
+})
+
 //Route to update a specific dog
 router.put("/api/dogs/:id", function(req, res){
 
