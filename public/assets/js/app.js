@@ -32,21 +32,21 @@ $(document).ready(function(){
     var dislikes
     var shelter_id
     
-    for(var i=0;i<5;i++) {
+    for(var i=0;i<dogsArray.length;i++) {
       console.log("It works", i);
       dog_id = dogsArray[i].dog_id
       dog_name = dogsArray[i].dog_name
       dog_image_url = dogsArray[i].dog_image_url
       dog_size = dogsArray[i].dog_size
       age = dogsArray[i].age
-      gender = dogsArray[i].activity_level
+      activity_level = dogsArray[i].activity_level
+      gender = dogsArray[i].gender
       breed = dogsArray[i].breed
       likes = dogsArray[i].likes
       dislikes = dogsArray[i].dislikes
       shelter_id = dogsArray[i].shelter_id
-    
-    
-      console.log(dog_id,dog_name,dog_size,age,activity_level,gender,breed,likes,dislikes,shelter_id)
+        console.log(dog_id,dog_name,dog_size,age,activity_level,gender,breed,likes,dislikes,shelter_id)
+    showResults(dog_name, dog_image_url, age, breed, gender, dog_size, activity_level, likes, dislikes)   
     }
     } 
 
@@ -79,20 +79,22 @@ $(".back").on("click", function(){
 
 // Add Favorite Cards
 $("#add-fave").on("click", function(){
-    addFave(imageURL,name, dogInfo)
+    console.log("favorite added!")
 })
 
 
 // Show Search Results
 $("#dog-result").on("click", function(){
     
-    //showResults(imageURL,name,dogInfo)
+    showResults(dog_name, dog_image_url, age, breed, gender, dog_size, activity_level, likes, dislikes)   
+    
     // Add to favorites
     $(".add").on("click", function(){
         alert("Added to Favorites")
     })
 })
 
+//Placeholder stuff, doesn't affect code
 imageURL = "https://placeimg.com/640/480/animals"
 name = "Dog Name"
 dogStats = {
@@ -109,14 +111,14 @@ dogInfo = "<div class='row'>Age:" + dogStats.age + "</div><div class='row'> Size
 
 
 // Functions
-function addFave(imageURL, name, dogInfo){
-    $("#faves-holder").append(`
+function showResults(Name, Image, Age, Breed, Gender, Size, Activity, Likes, Dislikes){
+    $(".dog-holder").append(`
         <div class="row">
-        <div class="col s8 push-s2">
+        <div class="col s4 push-s2">
             <div class="card">
             <div class="card-image">
-                <img src="https://placeimg.com/640/480/animals">
-                <span class="card-title">Dog Name</span>
+                <img src="`+ Image +`">
+                <span class="card-title">`+ Name +`</span>
                 <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
             </div>
             <div class="card-content">
@@ -144,10 +146,10 @@ function addFave(imageURL, name, dogInfo){
     `)
 }
 
-function showResults(imageURL, name, dogInfo){
-    $(".dog-holder").html('<div class="col s8 push-s2"><div class="card"><div class="card-image"><img src="' + imageURL + '"><span class="card-title">'+ name + '</span><a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"><span class="add">add</i></a></div><div class="card-content">' + dogInfo + '</div></div></div></div>' )
+// function showResults(imageURL, name, dogInfo){
+//     $(".dog-holder").html('<div class="col s8 push-s2"><div class="card"><div class="card-image"><img src="' + imageURL + '"><span class="card-title">'+ name + '</span><a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"><span class="add">add</i></a></div><div class="card-content">' + dogInfo + '</div></div></div></div>' )
 
-}
+// }
 
 function signUp(signUpType){
     $("#signup-holder").html(signUpType)
