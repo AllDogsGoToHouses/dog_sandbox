@@ -110,11 +110,39 @@ dogInfo = "<div class='row'>Age:" + dogStats.age + "</div><div class='row'> Size
 
 // Functions
 function addFave(imageURL, name, dogInfo){
-    $("#faves-holder").append
-    ('<div class="col s3 m4"> <div class="card"><div class="card-image"><img src="' + imageURL + '"></div><div class="card-action collapsible-header activator">'+ name + 
-    '</div> <div class="card-reveal"><span class="card-title">'+ name +' <i class="material-icons right">close</i></span>' +
-    '<p>' +  dogInfo + '</p>')
-} 
+    $("#faves-holder").append(`
+        <div class="row">
+        <div class="col s8 push-s2">
+            <div class="card">
+            <div class="card-image">
+                <img src="https://placeimg.com/640/480/animals">
+                <span class="card-title">Dog Name</span>
+                <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+            </div>
+            <div class="card-content">
+                <span class="row">
+                    <div class="col s4"><h6>`+ Age +`</h6><p>Dog Age</p></div>
+                    <div class="col s4"><h6>`+ Breed +`</h6>Dog Breed</div>
+                    <div class="col s4"><h6>`+ Gender +`</h6>Dog Gender</div>
+                </span>
+                <span class="row">
+                    <div class="col s6"><h6>`+ Size +`</h6>Dog Size</div>
+                    <div class="col s6"><h6>`+ Activity +`</h6>Dog Activity Level</div>
+                </span>
+                <span class="row">
+                    <h6>Likes</h6>
+                    <div class="col s4">`+ Likes + `</div>
+                </span>
+                <span class="row">
+                    <h6>Dislikes</h6>
+                    <div class="col s4">`+ Dislikes + `</div>
+                </span>
+            </div>
+            </div>
+        </div>
+        </div>
+    `)
+}
 
 function showResults(imageURL, name, dogInfo){
     $(".dog-holder").html('<div class="col s8 push-s2"><div class="card"><div class="card-image"><img src="' + imageURL + '"><span class="card-title">'+ name + '</span><a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons"><span class="add">add</i></a></div><div class="card-content">' + dogInfo + '</div></div></div></div>' )
