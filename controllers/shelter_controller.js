@@ -35,8 +35,7 @@ router.get("/api/shelter/:id", function(req, res){
 	db.Shelter.findOne({
 		where: {
 			id: req.params.id
-		},
-		include: [db.Dog]
+		}
 	}).then(function(dbShelter){
 		res.json(dbShelter);
 	});
