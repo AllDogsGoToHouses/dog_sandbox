@@ -1,8 +1,7 @@
 var loginHolder = $("#login-holder")
 
 // Opens Email Login
-$("#email-login").on("click", function(){
-    console.log("clicked")
+$(".email-login").on("click", function(){
     emailLogin()
 })
 
@@ -21,6 +20,8 @@ $("#gmail").on("click", function(){
     googleLogin()
     
 })
+
+
 
 
 // Modal Fxns
