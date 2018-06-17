@@ -1,16 +1,16 @@
 {
-  "development": {
+  "test": {
     "username": "root",
-    "password": "",
+    "password": "chowder",
     "database": "dogs_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+  "development": {
+    "username": "b50187286886ad",
+    "password": "301c0e86",
+    "database": "heroku_6d25e30d7fe5f42",
+    "host": "us-cdbr-iron-east-04.cleardb.net",
     "dialect": "mysql"
   },
   "production": {
